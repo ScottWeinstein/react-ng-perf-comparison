@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as rx from 'rxjs/Rx';
 
 @Component({
     selector: 'tile',
@@ -40,7 +41,11 @@ export class Tile implements OnInit {
   }
 
    ngOnInit() {
-     this.cross = this.newTick()
-     setInterval(() => this.cross = this.newTick(), 10);
+     this.cross = this.newTick();
+     rx.Observable.timer(0, 2).map(ii => ({ count: ii, rnd: Math.random() }))
+     .subscribe(ii => {
+        this.cross[ii.count % this.cross.length].price = ii.rnd;
+     })
+    //  setInterval(() => this.cross = this.newTick(), 10);
     }
 }
