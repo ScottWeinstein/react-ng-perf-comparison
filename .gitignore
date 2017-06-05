@@ -1,0 +1,30 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules/
+
+**/build
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+
+.idea
+jspm_packages
+npm-debug.log
+debug.log
+ng/src/**/*.js
+!ng/src/systemjs.config.extras.js
+!ng/src/systemjs.config.js
+!ng/src/systemjs-angular-loader.js
+*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
+_test-output
+_temp
+.vscode/
