@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Ticket from './Ticket';
 
 export class GroupView extends Component {
-  initialQuantity = 100;
+  initialQuantity = 0;
   initTime = 0;
   selectedItems = [];
   ticketId = 0;
@@ -11,13 +11,8 @@ export class GroupView extends Component {
   render() {
     return (
       <div>
-        <p>Group View goes here</p>
-        <ticket>
-
-        </ticket>
         <div className='tickets'>
           {
-            // const ids = _.range(0, this.initialQuantity);
             this.selectedItems.map(ii => <Ticket key={ii.ticketId} {...ii} />)
           }
         </div>
@@ -26,6 +21,7 @@ export class GroupView extends Component {
 
   constructor(props) {
     super(props);
+    this.initialQuantity = props.initialQuantity;
     this.picker = new LottoPicker();
   }
 
