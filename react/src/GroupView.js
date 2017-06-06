@@ -44,14 +44,10 @@ export class GroupView extends Component {
     if (numberToAdd < 1) {
       return;
     }
-    let maxTicketId = 0;
     for (let i = 0; i < numberToAdd; i++) {
       let t = this.getNewTicket('A');
       t.subscription = this.picker.addTicket(t.ticketId);
       this.selectedItems.push(t);
-      if (i === numberToAdd - 1) {
-        maxTicketId = t.ticketId;
-      }
     }
   }
 

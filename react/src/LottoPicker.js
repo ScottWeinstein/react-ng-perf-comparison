@@ -9,6 +9,32 @@ import "rxjs/add/operator/switchMap";
 import "rxjs/add/operator/share";
 import "rxjs/add/operator/publish";
 
+export class PickUpdate {
+    ticketId;
+    pick;
+
+    constructor(ticketId, pick) {
+        this.ticketId = ticketId;
+        this.pick = pick;
+    }
+}
+
+export class TicketModel {
+    subscription;
+    name = 'A';
+    ticketId;
+    pick = '95.11';
+
+    constructor(ticketId, name) {
+        this.ticketId = ticketId;
+        this.name = name;
+    }
+
+    updatePick(update) {
+        this.pick = update.pick;
+    }
+}
+
 export class LottoPicker {
   ticksSubscription;
   lastTicketCount;
@@ -77,31 +103,5 @@ export class LottoPicker {
       })
       .map((ticketId) => new PickUpdate(ticketId, (Math.random() * 100).toFixed(2)))
       .publish().refCount();
-  }
-}
-
-export class PickUpdate {
-  ticketId;
-  pick;
-
-  constructor(ticketId, pick) {
-    this.ticketId = ticketId;
-    this.pick = pick;
-  }
-}
-
-export class TicketModel {
-  subscription;
-  name = 'A';
-  ticketId;
-  pick = '95.11';
-
-  constructor(ticketId, name) {
-    this.ticketId = ticketId;
-    this.name = name;
-  }
-
-  updatePick(update) {
-    this.pick = update.pick;
   }
 }
