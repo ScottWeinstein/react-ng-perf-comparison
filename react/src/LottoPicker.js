@@ -92,22 +92,16 @@ export class PickUpdate {
 
 export class TicketModel {
   subscription;
-  serverTicketId;
-  cross = 'EUR USD';
-  currency1 = 'EUR';
-  currency2 = 'USD';
+  name = 'A';
   ticketId;
   pick = '95.11';
 
-  constructor(ticketId, cross) {
+  constructor(ticketId, name) {
     this.ticketId = ticketId;
-    this.cross = cross;
-    this.currency1 = cross.split(' ')[0];
-    this.currency2 = cross.split(' ')[1];
+    this.name = name;
   }
 
   updatePick(update) {
     this.pick = update.pick;
-    this.serverTicketId = update.ticketId;
   }
 }
