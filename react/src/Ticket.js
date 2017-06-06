@@ -14,9 +14,7 @@ export default class Ticket extends Component {
 
   componentDidMount() {
     this.subscription.subscribe((x) => {
-      // console.log(this.ticketId + ' ' + JSON.stringify(x));
       this.setState({ pick: x.value.pick, interval: x.interval });
-      // setInterval(() => this.setState(this.newTick()), 50);
     });
   }
 
