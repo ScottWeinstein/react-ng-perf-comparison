@@ -12,7 +12,7 @@ import "rxjs/add/operator/publish";
 export class LottoPicker {
   ticksSubscription;
   lastTicketCount;
-  isWorkerEnabled$ = new BehaviorSubject(this.workerInitialized);
+  isWorkerEnabled$ = new BehaviorSubject(false);
   addTicketsSubject$ = new Subject();
   resetTicketsSubject$ = new Subject();
   ticketCount$ = this.getTicketCount$(
