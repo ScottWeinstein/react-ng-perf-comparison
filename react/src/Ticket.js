@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+export default class Ticket extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.subscription = props.subscription.timeInterval();
+    this.ticketId = props.ticketId;
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState !== this.state;
+  }
+
+  componentDidMount() {
+    this.subscription.subscribe((x) => {
+      this.setState({ pick: x.value.pick, interval: x.interval });
+    });
+  }
+
+  render() {
+    return <ticket>
+      <div className='ticket'>
+        TicketId: {this.props.ticketId}
+        <br />
+        {
+          `
+          ${this.state.interval}
+          ${this.state.pick}
+          `
+        }
+      </div>
+    </ticket>
+  }
+}

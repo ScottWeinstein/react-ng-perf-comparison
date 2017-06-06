@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import _ from 'lodash';
-import Tile from './Tile';
+import { GroupView } from './GroupView';
 
 class App extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      tileCount: 20
+      initialQuantity: 400
     };
   }
 
   render() {
     return (
       <div className='App'>
-        <input type='number' value={this.state.tileCount} onChange={(e)=>this.setState({ tileCount: e.target.value })} />
-        <div className='tiles'>
-        {
-          _.range(0, this.state.tileCount).map(ii => <Tile key={ii} />)
-        }
-        </div>
+        Tiles Instantied: {this.state.initialQuantity}
+        <GroupView initialQuantity={this.state.initialQuantity}/>
       </div>
     );
   }
