@@ -1,6 +1,7 @@
 import {Component, ChangeDetectionStrategy, OnInit, NgZone, ChangeDetectorRef, Input} from '@angular/core';
 import { Subscription } from 'rxjs';
 import {TicketModel} from './LottoPicker';
+import 'rxjs/add/operator/timeInterval';
 
 @Component(
   {

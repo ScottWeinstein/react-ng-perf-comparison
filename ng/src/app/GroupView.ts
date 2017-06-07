@@ -54,37 +54,11 @@ export class GroupView implements OnInit, AfterViewInit {
     }
   }
 
-  // addPairs(numberToAdd) {
-  //   if (numberToAdd < 1) {
-  //     return;
-  //   }
-  //   let maxTileId = 0;
-  //   for (let i = 0; i < numberToAdd; i++) {
-  //     let t: TileModel = this.getNewTile(this.currencyPairs[0]);
-  //     this.state.selectedPairs.push(t);
-  //     if (i === numberToAdd - 1) {
-  //       maxTileId = t.tileId;
-  //     }
-  //   }
-  //   this.appState.set('selectedPairs', this.state.selectedPairs);
-  //   this.zone.runOutsideAngular(() => {
-  //     setTimeout(() => (this.priceService.addTile(maxTileId)), 0);
-  //   });
-  // }
-  // addPair(selectedPair) {
-  //   let t: TileModel = this.getNewTile(selectedPair);
-  //   this.state.selectedPairs.push(t);
-  //   this.zone.runOutsideAngular(() => {
-  //     this.priceService.addTile(t.tileId);
-  //   });
-  //   this.appState.set('selectedPairs', this.state.selectedPairs);
-  // }
-
   ticketIdTrackFn(index: number, ticketModel: TicketModel): number {
     return ticketModel || ticketModel.ticketId;
   }
 
-  getNewTicket(selectedGame) {
+  getNewTicket(selectedGame): TicketModel {
     return new TicketModel(this.getNextTicketId(), selectedGame);
   }
 

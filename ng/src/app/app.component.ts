@@ -14,8 +14,4 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 export class AppComponent  {
   initialQuantity: number = 400;
 
-  // setCount(cnt: number) {
-  //   this.initialQuantity = cnt;
-  //   // rx.Observable.range(0, cnt).toArray().subscribe((res) => this.tiles = res );
-  // }
 }

@@ -6,8 +6,10 @@ import 'rxjs/add/observable/merge';
 import 'rxjs/add/observable/interval';
 import 'rxjs/add/observable/range';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/scan';
 import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/publish';
 import {Injectable} from '@angular/core';
@@ -65,7 +67,7 @@ export class LottoPicker {
     return this.isWorkerEnabled$.switchMap((x) => {
                  return svc.ticks$;
                })
-               .filter(ticketUpdate => ticketUpdate.ticketId === ticketId);
+               .filter(pickUpdate => pickUpdate.ticketId === ticketId);
   }
 
   addTicket(ticketId) {
@@ -101,7 +103,7 @@ export class LottoPicker {
   getTicks$(ticketCount$: Observable<number>): Observable<PickUpdate> {
     return ticketCount$
       .switchMap((ticketCount, i) => {
-        return Observable.interval(50).flatMap(() => {
+        return Observable.interval(50).mergeMap(() => {
           return Observable.range(1, ticketCount);
         });
       })
