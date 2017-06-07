@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    <h1>
-      {{title}}
-    </h1>
+     Angular Tickets Instantiated: {{ initialQuantity }}
+      <group-view [initialQuantity]="initialQuantity"></group-view>
   `,
-  styles: []
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  title = 'app';
+  initialQuantity: number = 1000;
 }
