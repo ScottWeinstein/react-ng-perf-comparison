@@ -9,5 +9,5 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
-  initialQuantity: number = 1000;
+  initialQuantity: number = 500;
 }

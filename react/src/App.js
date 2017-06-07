@@ -6,7 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialQuantity: 1000
+      initialQuantity: 500
     };
   }
 
