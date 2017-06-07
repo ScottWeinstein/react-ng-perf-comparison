@@ -4,7 +4,7 @@ export default class Ticket extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.subscription = props.subscription.timeInterval();
+    this.updates$ = props.updates$.timeInterval();
     this.ticketId = props.ticketId;
   }
 
@@ -13,7 +13,7 @@ export default class Ticket extends Component {
   }
 
   componentDidMount() {
-    this.subscription.subscribe((x) => {
+    this.updates$.subscribe((x) => {
       this.setState({ pick: x.value.pick, interval: x.interval });
     });
   }

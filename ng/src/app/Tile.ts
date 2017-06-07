@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as rx from 'rxjs/Rx';
-
 @Component({
     selector: 'tile',
     template: `

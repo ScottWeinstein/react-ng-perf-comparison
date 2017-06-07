@@ -46,7 +46,7 @@ export class GroupView extends Component {
     }
     for (let i = 0; i < numberToAdd; i++) {
       let t = this.getNewTicket('A');
-      t.subscription = this.picker.addTicket(t.ticketId);
+      t.updates$ = this.picker.addTicket(t.ticketId);
       this.selectedItems.push(t);
     }
   }
