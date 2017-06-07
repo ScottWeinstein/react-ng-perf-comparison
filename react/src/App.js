@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        Tiles Instantiated: {this.state.initialQuantity}
+        React Tickets Instantiated: {this.state.initialQuantity}
         <GroupView initialQuantity={this.state.initialQuantity}/>
       </div>
     );

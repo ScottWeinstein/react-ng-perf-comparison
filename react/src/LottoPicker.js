@@ -67,7 +67,7 @@ export class LottoPicker {
 
   addTicket(ticketId) {
     this.addTicketsSubject$.next(ticketId);
-    console.log('LottoPicker addTicket to in-memory ticketId = ' + ticketId);
+    // console.log('LottoPicker addTicket to in-memory ticketId = ' + ticketId);
     return this.getTicketPick$(ticketId);
   }
 
