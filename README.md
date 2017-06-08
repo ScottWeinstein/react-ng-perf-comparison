@@ -62,10 +62,11 @@ since the tooling makes it difficult to set an precise test duration.
 
 ### Scripting
 
-Angular spends a much lower percentage of time scripting than React. 
-For 500 Components, we found that our React app averaged 21% more time scripting than 
-our Angular app (44.5% to 53.9). At 100 Components, we found that React spent a much 
-larger 92% increase in the time spent scripting versus Angular.
+Angular spends a much smaller percentage of time scripting than React. 
+
+__For Test 1 (500 Components), we found that React averaged 21% more time scripting than our Angular app (44.5% to 53.9%)__. 
+
+__For Test 2 (100 Components), we found that React averaged almost double the time spent scripting with a 92% increase versus Angular (6.3% to 12.1%).__
 
 *See the [Test Results Spreadsheet](./test-results/README.md) for the entire data set*
 
