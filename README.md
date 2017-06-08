@@ -101,12 +101,10 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 *See the [Test Results Spreadsheet](./test-results/README.md) for the entire data set*
 
 
-
-
 ### Test 1: 500 Components, 50ms updates
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
-| ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
+| --- | --- | --- | --- | --- | --- | --- |
 | 1 [(img)](/../../raw/master/test-results/01.png) | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
 | 2	[(img)](/../../raw/master/test-results/02.png) | React | 500 | 2 | 30,871 | 17,609 | 57.0% |
 | 3	[(img)](/../../raw/master/test-results/03.png) | React | 500 | 3 | 30,862 | 15,893 | 51.5% |
@@ -138,15 +136,17 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 __Running React results in 3 additional seconds of scripting in a 60second test__
 ![React Major GC Memory Usage 1](/../../raw/master/test-results/100-comps-60-sec-both-cpu-memory-run1.png)
 
+---
+
 ### Memory
 
 __React utilizes larger heap sizes and significantly greater quantity of Major GCs__
 ![React Major GC Memory Usage](/../../raw/master/test-results/100-comps-60-sec-both-memory-profile.png)
 
-<hr>
-
 ##### React GC Patterns and larger scripting time #2
 ![React Major GC Memory Usage 2](/../../raw/master/test-results/100-comps-60-sec-both-cpu-memory-run2.png)
+
+---
 
 ### Visuals
 
