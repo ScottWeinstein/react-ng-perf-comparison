@@ -167,8 +167,8 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
 components consistently show lower time intervals than React. 
-Due to the single-threaded nature of JavaScript, the RxJS timeInterval (1st binding) is a 
-simple visual representation of how quickly each framework can process a data update 
+Due to the single-threaded nature of JavaScript, the RxJS timeInterval (1st binding) is 
+a simple visual representation of how quickly each framework can process a data update 
 given a consistent number of microtasks on the event loop - the closer it is to the 
 publisher's 50ms rate, the better.
 
@@ -176,6 +176,8 @@ publisher's 50ms rate, the better.
  field, that lag is noticably amplified in a complex enterprise application where the 
  event loop is further bogged down by many factors including UI component complexity, 
  streaming data serialization/deserialization, and DOM events.**
- 
-##### React update lag noticeable
+
+React on left. Note that the time interval for nearly all 100 React components display 
+a time interval of 59 or above, while the Angular components are consistently lower 
+and are closer to the 50ms rate that RxJS is configured to publish.
 ![Intervals clearly higher in React app](/../../raw/master/test-results/100-comps-ng-vs-react-perf.png)
