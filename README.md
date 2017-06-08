@@ -26,8 +26,8 @@ ToC
 		* [Memory](#memory)
 			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
-		* [Noticable UI Lag](#noticable-ui-lag)
-			* [UI Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
+		* [Noticeable UI Lag](#noticeable-ui-lag)
+			* [React update lag noticeable](#react-update-lag-noticeable)
 
 # Overview
 
@@ -177,5 +177,5 @@ publisher's 50ms rate, the better.
  event loop is further bogged down by many factors including UI component complexity, 
  streaming data serialization/deserialization, and DOM events.**
  
-##### React update lag clearly visible on left
+##### React update lag noticeable
 ![Intervals clearly higher in React app](/../../raw/master/test-results/100-comps-ng-vs-react-perf.png)
