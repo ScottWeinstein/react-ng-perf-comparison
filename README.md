@@ -1,13 +1,11 @@
 #### tldr
 
-Angular consistently outperforms React in its ability to quickly deliver real-time 
-data updates to the UI. Our results draw the following conclusions:
+Based off our investigation, we can make the following conclusions:
 
 1. __Scripting__: Angular spents less time Scripting than React
 
-2. __Memory__: Angular appears to be more efficient at memory management using less heap 
-with less memory volatility. Angular also appears to be more effective at 
-reducing Major GCs.
+2. __Memory__: Angular utilizes less Heap with less memory volatility. 
+We've also observed that running Angular results in fewer Major GCs.
 
 3. __Visuals__: Angular processes updates more quickly from the time they are generated
 
@@ -15,30 +13,30 @@ reducing Major GCs.
 # Overview
 
 This repo contains 2 projects with feature parity, one based on React v15 and one based 
-on Angular 4. Aside from RxJS, there are no additional libraries outside the framework 
-itself and no clutter. The Angular app was generated with the 
-[Angular CLI](https://github.com/angular/angular-cli) and the React app was generated 
-with [create-react-app](https://github.com/facebookincubator/create-react-app). 
-Performance Results were calculated for each using optimized production builds of each.
+on Angular 4. Aside from RxJS, there are no additional libraries. The Angular app was 
+generated with the [Angular CLI](https://github.com/angular/angular-cli) and the React
+ app was generated with [create-react-app](https://github.com/facebookincubator/create-react-app). 
+Performance Results were calculated for each using optimized production builds.
 
 The purpose of these 2 projects is to compare Angular and React rendering performance in 
 scenarios where there are many DOM elements updating extremely quickly, which is a common 
-in industries consuming real-time data feeds.
+scenario in industries consuming real-time data feeds.
  
 Each app instantiates a preset number of simple components (configured through 
 `initialQuantity` property in [app.component.ts](./ang/src/app/app.component.ts) and
- [App.js](./react/src/App.js)). Each component kicks off an RxJS Observable data stream 
- that publishes every 50ms. Each component contains 2 bindings that update on each tick, 
- where the first binding represents the timeInterval from the previous update to the 
- current and the 2nd binding contains the updated data it received from the Observable. 
+ [App.js](./react/src/App.js)). Each component kicks off an RxJS `Observable` data stream 
+ that publishes every 50ms. Each component contains 2 bindings that update on each RxJS emit, 
+ where the first binding represents the time interval in ms from the previous update to the 
+ current and the 2nd binding contains the updated data it received from the `Observable`. 
 
 # Procedure
-1. Close as many open apps as possible on the machine as possible to prevent possible
+
+1. Close as many open apps as possible on the machine to prevent possible
  resource contention (CPU, Memory, I/O, ...) that could compromise test results.
 1. Prepare a fresh Chrome: Disable any relevant extensions, clear caches, close all other
  tabs/windows, etc.
 1. Run `npm install` from both Angular and React app project roots.
-1. Set the `initialQuantity` property in both [app.component.ts](./ang/src/app/app.component.ts) 
+1. Set the `initialQuantity` property in both [app.component.ts](./ang/src/app/app.component.ts#L12) 
 and [App.js](./react/src/App.js)) to the desired number of controls you'd like to test.
 1. Run production optimized builds of both apps from each project root `npm run build`
 1. Serve up the generated assets using your favorite http-server for each project (one 
