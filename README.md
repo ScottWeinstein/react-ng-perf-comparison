@@ -20,12 +20,13 @@ ToC
 	* [Test Approach](#test-approach)
 	* [Findings](#findings)
 		* [Scripting](#scripting)
-		* [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
-		* [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
+			* [Summary Table](#summary-table)
+			* [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
+			* [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
 		* [Memory](#memory)
 			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
-		* [Noticable Lag](#noticable-lag)
+		* [Noticable UI Lag](#noticable-ui-lag)
 			* [UI Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
 
 # Overview
@@ -162,7 +163,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 ---
 
-### Noticable Lag
+### Noticable UI Lag
 
 Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
 components consistently show lower time intervals than React. 
@@ -176,5 +177,5 @@ publisher's 50ms rate, the better.
  event loop is further bogged down by many factors including UI component complexity, 
  streaming data serialization/deserialization, and DOM events.**
  
-##### Visual Lag clearly visible in React app on left
+##### React update lag clearly visible on left
 ![Intervals clearly higher in React app](/../../raw/master/test-results/100-comps-ng-vs-react-perf.png)
