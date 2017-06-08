@@ -27,7 +27,6 @@ ToC
 			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
 		* [Noticeable UI Lag](#noticeable-ui-lag)
-			* [React update lag noticeable](#react-update-lag-noticeable)
 
 # Overview
 
