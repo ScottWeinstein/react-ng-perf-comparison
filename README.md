@@ -16,16 +16,16 @@ ToC
 * [Overview](#overview)
 * [Procedure](#procedure)
 * [Results](#results)
-  * [Environment:](#environment)
-  * [Test Approach](#test-approach)
-  * [Findings](#findings)
-     * [Scripting](#scripting)
-     * [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
-     * [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
-     * [Memory](#memory)
-           * [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
-     * [Visuals](#visuals)
-           * [Visual Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
+	* [Environment](#environment)
+	* [Test Approach](#test-approach)
+	* [Findings](#findings)
+		* [Scripting](#scripting)
+		* [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
+		* [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
+		* [Memory](#memory)
+			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
+		* [Visuals](#visuals)
+			* [Visual Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
 
 # Overview
 
@@ -69,7 +69,7 @@ performance profiler.
 We currently include results both stats and screenshots for 20 test runs found under 
 [test-results](./test-results) 
 
-## Environment:
+## Environment
 - macOS Sierra (10.12.5)
 - Chrome 58.0.3029.110 (64-bit)
 - MacBook Pro (Retina, Mid 2012) 2.6 GHz i7
