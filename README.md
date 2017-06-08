@@ -1,4 +1,6 @@
-#### tldr
+# React v Angular performance comparison
+
+#### tl;dr
 
 Based off our investigation, we can make the following conclusions:
 
