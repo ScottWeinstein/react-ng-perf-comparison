@@ -10,6 +10,23 @@ We've also observed that running Angular results in fewer Major GCs.
 3. __Visuals__: Angular processes updates more quickly from the time they are generated
 
 
+ToC
+=================
+
+* [Overview](#overview)
+* [Procedure](#procedure)
+* [Results](#results)
+  * [Environment:](#environment)
+  * [Test Approach](#test-approach)
+  * [Findings](#findings)
+     * [Scripting](#scripting)
+     * [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
+     * [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
+     * [Memory](#memory)
+           * [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
+     * [Visuals](#visuals)
+           * [Visual Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
+
 # Overview
 
 This repo contains 2 projects with feature parity, one based on React v15 and one based 
@@ -86,7 +103,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 
 
-#### Test 1: 500 Components, 50ms updates
+### Test 1: 500 Components, 50ms updates
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
@@ -102,7 +119,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 14 [(img)](/../../raw/master/test-results/14.png) | Angular | 500 | 4 | 30,383 | 13,583 | 44.7% |
 | 15 [(img)](/../../raw/master/test-results/15.png) | Angular | 500 | 5 | 30,369 | 13,349 | 44.0% |
 
-#### Test 2: 100 Components, 50ms updates
+### Test 2: 100 Components, 50ms updates
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
