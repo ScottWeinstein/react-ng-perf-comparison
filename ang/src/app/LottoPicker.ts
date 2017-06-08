@@ -1,13 +1,18 @@
-import { Observable, Subject, BehaviorSubject } from "rxjs";
-import "rxjs/add/observable/fromEvent";
-import "rxjs/add/observable/merge";
-import "rxjs/add/observable/interval";
-import "rxjs/add/observable/range";
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/scan";
-import "rxjs/add/operator/switchMap";
-import "rxjs/add/operator/share";
-import "rxjs/add/operator/publish";
+import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import 'rxjs/add/observable/fromEvent';
+import 'rxjs/add/observable/merge';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/range';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/operator/scan';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/share';
+import 'rxjs/add/operator/publish';
+import {Injectable} from '@angular/core';
 
 export class PickUpdate {
     ticketId;
@@ -20,7 +25,7 @@ export class PickUpdate {
 }
 
 export class TicketModel {
-    subscription;
+    updates$;
     name = 'A';
     ticketId;
     pick = '95.11';
@@ -35,18 +40,18 @@ export class TicketModel {
     }
 }
 
+@Injectable()
 export class LottoPicker {
   ticksSubscription;
   lastTicketCount;
   isWorkerEnabled$ = new BehaviorSubject(false);
   addTicketsSubject$ = new Subject();
   resetTicketsSubject$ = new Subject();
-  ticketCount$ = this.getTicketCount$(
+  ticketCount$: Observable<number> = this.getTicketCount$(
     this.addTicketsSubject$,
-    this.resetTicketsSubject$,
-    'LottoPicker'
+    this.resetTicketsSubject$
   );
-  ticks$ = this.getTicks$(this.ticketCount$, 'LottoPicker');
+  public ticks$: Observable<PickUpdate> = this.getTicks$(this.ticketCount$);
 
   constructor() {
     this.ticketCount$.subscribe(lastTicketCount => {
@@ -57,12 +62,12 @@ export class LottoPicker {
     });
   }
 
-  getTicketPick$(ticketId) {
+  getTicketPick$(ticketId: number): Observable<PickUpdate> {
     let svc = this;
     return this.isWorkerEnabled$.switchMap((x) => {
                  return svc.ticks$;
                })
-               .filter(ticketUpdate => ticketUpdate.ticketId === ticketId);
+               .filter(pickUpdate => pickUpdate.ticketId === ticketId);
   }
 
   addTicket(ticketId) {
@@ -75,7 +80,8 @@ export class LottoPicker {
     this.ticksSubscription = this.ticks$.subscribe();
   }
 
-  getTicketCount$(addTicketsSubject$, resetTicketsSubject$) {
+  getTicketCount$(addTicketsSubject$: Subject<any>,
+                  resetTicketsSubject$: Subject<any>): Observable<number> {
     return Observable.merge(
       // increment
       addTicketsSubject$.asObservable()
@@ -94,10 +100,10 @@ export class LottoPicker {
                      }, 0);
   }
 
-  getTicks$(ticketCount$) {
+  getTicks$(ticketCount$: Observable<number>): Observable<PickUpdate> {
     return ticketCount$
       .switchMap((ticketCount, i) => {
-        return Observable.interval(50).flatMap(() => {
+        return Observable.interval(50).mergeMap(() => {
           return Observable.range(1, ticketCount);
         });
       })

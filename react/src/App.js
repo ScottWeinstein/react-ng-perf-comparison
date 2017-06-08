@@ -6,14 +6,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialQuantity: 400
+      initialQuantity: 500
     };
   }
 
   render() {
     return (
       <div className='App'>
-        Tiles Instantied: {this.state.initialQuantity}
+        React Tickets Instantiated: {this.state.initialQuantity}
         <GroupView initialQuantity={this.state.initialQuantity}/>
       </div>
     );
