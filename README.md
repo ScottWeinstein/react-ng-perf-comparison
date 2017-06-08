@@ -1,14 +1,19 @@
-#### tldr
+# React v Angular performance comparison
+
+#### tl;dr
 
 Based off our investigation, we can make the following conclusions:
 
-1. __Scripting__: Angular spents less time Scripting than React
+1. __Scripting__: Angular spends less time Scripting than React
 
 2. __Memory__: Angular utilizes less Heap with less memory volatility. 
 We've also observed that running Angular results in fewer Major GCs.
 
 3. __Visuals__: Angular processes updates more quickly from the time they are generated
 
+#### Demo
+* [Angular](https://scottweinstein.github.io/react-ng-perf-comparison/ang/)
+* [React](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
 
 ToC
 =================
