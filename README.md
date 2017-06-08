@@ -12,8 +12,8 @@ We've also observed that running Angular results in fewer Major GCs.
 3. __Visuals__: Angular processes updates more quickly from the time they are generated
 
 #### Demo
-
-https://scottweinstein.github.io/react-ng-perf-comparison/
+* [Angular](https://scottweinstein.github.io/react-ng-perf-comparison/ang/)
+* [React](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
 
 ToC
 =================
