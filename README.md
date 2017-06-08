@@ -71,7 +71,7 @@ larger 92% increase in the time spent scripting versus Angular.
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
-| 1	|   React	|    500	 |      1 |	        30,452 	   |        16,727  |  54.9% |
+| [1](./test-results/01.png) |  React |    500	 |      1 |	        30,452 	   |        16,727  |  54.9% |
 | 2	|   React	|    500	 |      2 |	        30,871 	   |        17,609  |  57.0% |
 | 3	|   React	|    500	 |      3 |	        30,862 	   |        15,893  |  51.5% |
 | 4	|   React	|    500	 |      4 |	        30,348 	   |        16,087  |  53.0% |
@@ -97,14 +97,14 @@ larger 92% increase in the time spent scripting versus Angular.
 
 ### Memory
 
-##### React Major GC Memory Usage 1
+##### React shows higher heap usage and significantly larger number of Major GCs
+![React Major GC Memory Usage](./test-results/100-comps-60-sec-both-memory-profile.png)
+
+##### React GC Patterns and 
 ![React Major GC Memory Usage 1](./test-results/100-comps-60-sec-both-cpu-memory-run1.png)
 
 ##### React Major GC Memory Usage 2
 ![React Major GC Memory Usage 2](./test-results/100-comps-60-sec-both-cpu-memory-run2.png)
-
-##### React Major GC Memory
-![React Major GC Memory Usage](./test-results/100-comps-60-sec-both-memory-profile.png)
 
 
 ### Visuals
