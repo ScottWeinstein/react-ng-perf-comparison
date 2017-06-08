@@ -10,13 +10,19 @@
     "rxjs": "^5.4.0"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "mv": "^2.1.1",
+    "react-scripts": "0.9.5",
+    "rimraf": "^2.6.1"
   },
   "scripts": {
     "start": "PORT=9000 react-scripts start",
     "build": "react-scripts build",
+    "build:gh": "npm run clean:docs-react && react-scripts build && npm run mv -- -v build/* ../docs/react/",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rimraf": "rimraf",
+    "clean:docs-react": "npm run rimraf -- ../docs/react/*",
+    "mv": "mv"
   },
   "homepage": "."
 }
