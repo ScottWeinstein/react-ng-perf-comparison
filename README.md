@@ -86,9 +86,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 
 
+#### Test 1: 500 Components, 50ms updates
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
+| 1 [(img)](/../raw/master/test-results/01.png) | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
 | 1 [(img)](./test-results/01.png) | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
 | 2	[(img)](./test-results/02.png) | React | 500 | 2 | 30,871 | 17,609 | 57.0% |
 | 3	[(img)](./test-results/03.png) | React | 500 | 3 | 30,862 | 15,893 | 51.5% |
@@ -100,7 +102,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 13 [(img)](./test-results/13.png) | Angular | 500 | 3 | 31,021 | 13,694 | 44.1% |
 | 14 [(img)](./test-results/14.png) | Angular | 500 | 4 | 30,383 | 13,583 | 44.7% |
 | 15 [(img)](./test-results/15.png) | Angular | 500 | 5 | 30,369 | 13,349 | 44.0% |
-| |
+
+#### Test 2: 100 Components, 50ms updates
+
+| TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
+| ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
 | 6	[(img)](./test-results/06.png) | React | 100 | 1 | 30,570 | 3,895 | 12.7% |
 | 7	[(img)](./test-results/07.png) | React | 100 | 2 | 29,890 | 3,564 | 11.9% |
 | 8	[(img)](./test-results/08.png) | React | 100 | 3 | 30,615 | 3,575 | 11.7% |
@@ -137,3 +143,8 @@ publisher's 50ms rate, the better.
 
 ##### Visual Lag clearly visible in React app on left
 ![Intervals clearly higher in React app](./test-results/100-comps-ng-vs-react-perf.png)
+
+
+- pivot table
+- highlight findings
+- clarify that its visually different for as few as 100 components and is much more noticable as libraries are added.
