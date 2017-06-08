@@ -1,3 +1,17 @@
+#### tldr
+
+Angular consistently outperforms React in its ability to quickly deliver real-time 
+data updates to the UI. Our results draw the following conclusions:
+
+1. __Scripting__: Angular spents less time Scripting than React
+
+2. __Memory__: Angular appears to be more efficient at memory management using less heap 
+with less memory volatility. Angular also appears to be more effective at 
+reducing Major GCs.
+
+3. __Visuals__: Angular processes updates more quickly from the time they are generated
+
+
 # Overview
 
 This repo contains 2 projects with feature parity, one based on React v15 and one based 
@@ -37,9 +51,8 @@ performance profiler.
 
 # Results
 
-tldr: Angular consistently outperforms React in its ability to quickly deliver real-time 
-data updates to the UI. We currently include results both stats and screenshots for 20
- test runs found under test-results](./test-results) 
+We currently include results both stats and screenshots for 20 test runs found under 
+[test-results](./test-results) 
 
 ## Environment:
 - macOS Sierra (10.12.5)
@@ -97,11 +110,14 @@ __For Test 2 (100 Components), we found that React averaged almost double the ti
 | 20 [(img)](./test-results/20.png) |	Angular	|    100	 |      5 |	        30,406 	   |        1,851 	|    6.1% |
 
 ### Memory
+__React shows higher heap usage and greater frequency of Major GCs__
 
 ##### React shows higher heap usage and significantly larger number of Major GCs
 ![React Major GC Memory Usage](./test-results/100-comps-60-sec-both-memory-profile.png)
 
 ##### React GC Patterns and larger scripting time
+React shows inconsistent GC patterns 
+
 ![React Major GC Memory Usage 1](./test-results/100-comps-60-sec-both-cpu-memory-run1.png)
 
 ##### React GC Patterns and larger scripting time #2
