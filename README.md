@@ -25,8 +25,8 @@ ToC
 		* [Memory](#memory)
 			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
-		* [Visuals](#visuals)
-			* [Visual Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
+		* [Noticable Lag](#noticable-lag)
+			* [UI Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
 
 # Overview
 
@@ -89,7 +89,10 @@ since the tooling makes it difficult to set an precise test duration.
 
 ## Findings
 
-We have 
+We have identified 3 separate areas of concern regarding React performance:
+1. Scripting
+1. Memory
+1. Noticable lag of UI updates 
 
 ### Scripting
 
@@ -98,6 +101,16 @@ Angular spends a smaller percentage of time scripting than React.
 __For Test 1 (500 Components), we found that React averaged 21% more time scripting than Angular__. 
 
 __For Test 2 (100 Components), we found that React averaged 92% more time scripting than Angular.__
+
+#### Summary Table
+
+| Components | Library | Avg - % of Test Time spent Scripting | Avg - Scripting Time (ms) | StdDev - % of Test Time spent Scripting |
+| --- | --- | --- | ---| --- | 
+| 100 | Angular | 6.3% | 1,905 | 0.3% |
+| 100 | React	| 12.1%	| 3,669	| 0.5% | 
+|   |
+| 500 | Angular	| 44.5%	| 13,594 | 0.5% |
+| 500 | React | 53.9% | 16,494 | 2.1% |
 
 *See the [Test Results Spreadsheet](./test-results/README.md) for the entire data set*
 
@@ -134,7 +147,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 19 [(img)](/../../raw/master/test-results/19.png) | Angular | 100 | 4 | 30,292 | 1,817 | 6.0% |
 | 20 [(img)](/../../raw/master/test-results/20.png) | Angular | 100 | 5 | 30,406 | 1,851 | 6.1% |
 
-__Running React results in 3 additional seconds of scripting in a 60second test__
+### Example: Running React results in 3 additional seconds of scripting in a 60 second test
 ![React Major GC Memory Usage 1](/../../raw/master/test-results/100-comps-60-sec-both-cpu-memory-run1.png)
 
 ---
@@ -149,7 +162,7 @@ __Running React results in 3 additional seconds of scripting in a 60second test_
 
 ---
 
-### Visuals
+### Noticable Lag
 
 Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
 components consistently show lower time intervals than React. 
@@ -158,10 +171,10 @@ simple visual representation of how quickly each framework can process a data up
 given a consistent number of microtasks on the event loop - the closer it is to the 
 publisher's 50ms rate, the better.
 
+**Note that while this screenshot displays only a small lag through the time interval
+ field, that lag is noticably amplified in a complex enterprise application where the 
+ event loop is further bogged down by many factors including UI component complexity, 
+ streaming data serialization/deserialization, and DOM events.**
+ 
 ##### Visual Lag clearly visible in React app on left
 ![Intervals clearly higher in React app](/../../raw/master/test-results/100-comps-ng-vs-react-perf.png)
-
-
-- pivot table
-- highlight findings
-- clarify that its visually different for as few as 100 components and is much more noticable as libraries are added.
