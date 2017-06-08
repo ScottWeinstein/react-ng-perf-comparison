@@ -26,7 +26,7 @@ ToC
 		* [Memory](#memory)
 			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
-		* [Noticeable UI Lag](#noticeable-ui-lag)
+		* [Noticeable delay in data freshness on the UI](#noticeable-delay-in-data-freshness)
 
 # Overview
 
@@ -92,7 +92,7 @@ since the tooling makes it difficult to set an precise test duration.
 We have identified 3 separate areas of concern regarding React performance:
 1. Scripting
 1. Memory
-1. Noticable lag of UI updates 
+1. Noticable delay in data freshness on the UI 
 
 ### Scripting
 
@@ -162,14 +162,14 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 ---
 
-### Noticeable UI Lag
+### Noticeable delay in data freshness
 
-Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
-components consistently show lower time intervals than React. 
-Due to the single-threaded nature of JavaScript, the RxJS timeInterval (1st binding) is 
-a simple visual representation of how quickly each framework can process a data update 
-given a consistent number of microtasks on the event loop - the closer it is to the 
-publisher's 50ms rate, the better.
+Using RxJS timeInterval() as a simple visual representation of throughput, Angular 
+components consistently show lower time intervals than React. Due to the single-threaded 
+nature of JavaScript, the RxJS timeInterval (1st binding) is a simple visual 
+representation of how quickly each framework can process a data update given a consistent
+number of microtasks on the event loop - the closer it is to the publisher's 50ms 
+rate, the better.
 
 **Note that while this screenshot displays only a small lag through the time interval
  field, that lag is noticably amplified in a complex enterprise application where the 
