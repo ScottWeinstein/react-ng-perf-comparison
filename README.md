@@ -23,6 +23,7 @@ ToC
 		* [Test 1: 500 Components, 50ms updates](#test-1-500-components-50ms-updates)
 		* [Test 2: 100 Components, 50ms updates](#test-2-100-components-50ms-updates)
 		* [Memory](#memory)
+			* [React utilizes larger heap sizes and significantly greater quantity of Major GCs](#react-utilizes-larger-heap-sizes-and-significantly-greater-quantity-of-major-gcs)
 			* [React GC Patterns and larger scripting time #2](#react-gc-patterns-and-larger-scripting-time-2)
 		* [Visuals](#visuals)
 			* [Visual Lag clearly visible in React app on left](#visual-lag-clearly-visible-in-react-app-on-left)
@@ -140,10 +141,10 @@ __Running React results in 3 additional seconds of scripting in a 60second test_
 
 ### Memory
 
-__React utilizes larger heap sizes and significantly greater quantity of Major GCs__
+#### React utilizes larger heap sizes and significantly greater quantity of Major GCs
 ![React Major GC Memory Usage](/../../raw/master/test-results/100-comps-60-sec-both-memory-profile.png)
 
-##### React GC Patterns and larger scripting time #2
+#### React GC Patterns and larger scripting time #2
 ![React Major GC Memory Usage 2](/../../raw/master/test-results/100-comps-60-sec-both-cpu-memory-run2.png)
 
 ---
