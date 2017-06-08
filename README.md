@@ -119,7 +119,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | --- | --- | --- | --- | --- | --- | --- |
-| <details><summary>01</summary>![(img)](/../../raw/master/test-results/01.png)</details> | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
+| 01 [(img)](/../../raw/master/test-results/01.png) | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
 | 02 [(img)](/../../raw/master/test-results/02.png) | React | 500 | 2 | 30,871 | 17,609 | 57.0% |
 | 03 [(img)](/../../raw/master/test-results/03.png) | React | 500 | 3 | 30,862 | 15,893 | 51.5% |
 | 04 [(img)](/../../raw/master/test-results/04.png) | React | 500 | 4 | 30,348 | 16,087 | 53.0% |
