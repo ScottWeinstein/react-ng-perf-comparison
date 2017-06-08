@@ -163,7 +163,7 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 ---
 
-### Noticable UI Lag
+### Noticeable UI Lag
 
 Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
 components consistently show lower time intervals than React. 
