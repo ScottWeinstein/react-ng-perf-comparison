@@ -107,8 +107,6 @@ larger 92% increase in the time spent scripting versus Angular.
 ![React Major GC Memory Usage](./test-results/100-comps-60-sec-both-memory-profile.png)
 
 
-![React Major GC Perf](./test-results/100-comps-ng-vs-react-perf.png)
-
 ### Visuals
 
 Using RxJS timeInterval() as a simple visual representation of thoroughput, Angular 
@@ -118,6 +116,8 @@ simple visual representation of how quickly each framework can process a data up
 given a consistent number of microtasks on the event loop - the closer it is to the 
 publisher's 50ms rate, the better.
 
-![Intervals clearly higher in React app]()
+
+##### Visual Lag clearly visible in React app on left
+![Intervals clearly higher in React app](./test-results/100-comps-ng-vs-react-perf.png)
 
 
