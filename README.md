@@ -67,7 +67,7 @@ For 500 Components, we found that our React app averaged 21% more time scripting
 our Angular app (44.5% to 53.9). At 100 Components, we found that React spent a much 
 larger 92% increase in the time spent scripting versus Angular.
 
-*See the [Test Results Spreadsheet](./test-results/perf-results.htm) for the entire data set*
+*See the [Test Results Spreadsheet](./test-results/README.md) for the entire data set*
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
@@ -115,8 +115,5 @@ simple visual representation of how quickly each framework can process a data up
 given a consistent number of microtasks on the event loop - the closer it is to the 
 publisher's 50ms rate, the better.
 
-
 ##### Visual Lag clearly visible in React app on left
 ![Intervals clearly higher in React app](./test-results/100-comps-ng-vs-react-perf.png)
-
-
