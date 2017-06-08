@@ -107,10 +107,10 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | Components | Library | Avg - % of Test Time spent Scripting | Avg - Scripting Time (ms) | StdDev - % of Test Time spent Scripting |
 | --- | --- | --- | ---| --- | 
 | 100 | Angular | 6.3% | 1,905 | 0.3% |
-| 100 | React	| 12.1%	| 3,669	| 0.5% | 
+| 100 | React	| 12.1%	&#x1F53A; | 3,669	| 0.5% | 
 |   |
 | 500 | Angular	| 44.5%	| 13,594 | 0.5% |
-| 500 | React | 53.9% | 16,494 | 2.1% |
+| 500 | React | 53.9% &#x1F53A; | 16,494 | 2.1% |
 
 *See the [Test Results Spreadsheet](./test-results/README.md) for the entire data set*
 
