@@ -107,6 +107,9 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 19 [(img)](./test-results/19.png) |	Angular	|    100	 |      4 |  30,292 |        1,817 	|    6.0% |
 | 20 [(img)](./test-results/20.png) |	Angular	|    100	 |      5 |  30,406 |        1,851 	|    6.1% |
 
+__Running React results in 3 additional seconds of scripting in a 60second test__
+![React Major GC Memory Usage 1](./test-results/100-comps-60-sec-both-cpu-memory-run1.png)
+
 ### Memory
 
 __React utilizes larger heap sizes and significantly greater quantity of Major GCs__
@@ -116,7 +119,6 @@ __React utilizes larger heap sizes and significantly greater quantity of Major G
 
 __React utilitizes inconsistent GC patterns__
 
-![React Major GC Memory Usage 1](./test-results/100-comps-60-sec-both-cpu-memory-run1.png)
 
 ##### React GC Patterns and larger scripting time #2
 ![React Major GC Memory Usage 2](./test-results/100-comps-60-sec-both-cpu-memory-run2.png)
