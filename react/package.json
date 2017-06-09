@@ -12,17 +12,20 @@
   "devDependencies": {
     "mv": "^2.1.1",
     "react-scripts": "0.9.5",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "serve": "^5.2.2"
   },
   "scripts": {
-    "start": "PORT=9000 react-scripts start",
-    "build": "react-scripts build",
-    "build:gh": "npm run clean:docs-react && react-scripts build && npm run mv -- -v build/* ../docs/react/",
-    "test": "react-scripts test --env=jsdom",
+    "build": "npm run clean:docs && react-scripts build && npm run mv -- -v build/* ../docs/react/",
+    "build:serve": "npm run build && npm run serve:docs",
+    "clean:docs": "npm run rimraf -- ../docs/react/*",
     "eject": "react-scripts eject",
+    "mv": "mv",
     "rimraf": "rimraf",
-    "clean:docs-react": "npm run rimraf -- ../docs/react/*",
-    "mv": "mv"
+    "serve": "serve",
+    "serve:docs": "npm run serve -- -p 5000 -s ../docs/react",
+    "start": "PORT=9000 react-scripts start",
+    "test": "react-scripts test --env=jsdom"
   },
   "homepage": "."
 }

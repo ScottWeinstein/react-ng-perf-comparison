@@ -19,8 +19,7 @@ export default class Ticket extends Component {
   }
 
   render() {
-    return <ticket>
-      <div className='ticket'>
+    return <div className='ticket'>
         TicketId: {this.props.ticketId}
         <br />
         {
@@ -30,6 +29,5 @@ export default class Ticket extends Component {
           `
         }
       </div>
-    </ticket>
   }
 }

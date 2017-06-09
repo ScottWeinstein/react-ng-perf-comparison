@@ -13,7 +13,10 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        React Tickets Instantiated: {this.state.initialQuantity}
+        Source Repo: <a href="https://github.com/ScottWeinstein/react-ng-perf-comparison">
+        https://github.com/ScottWeinstein/react-ng-perf-comparison</a>
+        <br />
+        React Tickets Instantiated: {this.state.initialQuantity} | Update Speed: 50ms
         <GroupView initialQuantity={this.state.initialQuantity}/>
       </div>
     );

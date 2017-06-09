@@ -1,2 +1,2 @@
-npm run build
-
+- General Info: [README](../README.md)
+- Commands: [package.json](./package.json)
