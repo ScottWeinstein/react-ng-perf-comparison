@@ -13,7 +13,7 @@
     "ng": "ng",
     "rimraf": "rimraf",
     "serve": "serve",
-    "serve:docs-ang": "npm run serve -- -p 5002 -s build",
+    "serve:docs-ang": "npm run serve -- -p 5002 -s ../docs/ang",
     "start": "ng serve",
     "test": "ng test"
   },
