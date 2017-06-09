@@ -114,11 +114,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | --- | --- | --- | ---| --- | 
 | 100 | Angular | 6.3% | 1,905 | 0.3% |
 | 100 | React	| 12.1%	&#x1F53A; | 3,669 | 0.5% | 
-| 100 | React v16 Alpha | % |  | % | 
+| 100 | React v16 Alpha | 11.6% | 3,547 | % | 
 |   |
 | 500 | Angular	| 44.5%	| 13,594 | 0.5% |
 | 500 | React | 53.9% &#x1F53A; | 16,494 | 2.1% |
-| 500 | React v16 Alpha | % |  | % |
+| 500 | React v16 Alpha | 58.7% | 17,803 | % |
 
 *See the [Test Results folder](./test-results/) for screenshots of the entire result set.*
 
@@ -133,11 +133,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 04 [(img)](/../../raw/master/test-results/04.png) | React v15 | 500 | 4 | 30,348 | 16,087 | 53.0% |
 | 05 [(img)](/../../raw/master/test-results/05.png) | React v15 | 500 | 5 | 30,512 | 16,154 | 52.9% |
 |  | 	                                                
-| 21 [(img)](/../../raw/master/test-results/21.png) | React v16 | 500 | 1 | 30,369 |  | % |
-| 22 [(img)](/../../raw/master/test-results/22.png) | React v16 | 500 | 2 | 30,434 |  | % |
-| 23 [(img)](/../../raw/master/test-results/23.png) | React v16 | 500 | 3 |  |  | % |
-| 24 [(img)](/../../raw/master/test-results/24.png) | React v16 | 500 | 4 |  |  | % |
-| 25 [(img)](/../../raw/master/test-results/25.png) | React v16 | 500 | 5 |  |  | % |
+| 21 [(img)](/../../raw/master/test-results/21.png) | React v16 | 500 | 1 | 30,369 |  | 58.9% |
+| 22 [(img)](/../../raw/master/test-results/22.png) | React v16 | 500 | 2 | 30,434 |  | 60.7% |
+| 23 [(img)](/../../raw/master/test-results/23.png) | React v16 | 500 | 3 |  30,040  |  | 58.6% |
+| 24 [(img)](/../../raw/master/test-results/24.png) | React v16 | 500 | 4 |  30,312  |  | 57.1% |
+| 25 [(img)](/../../raw/master/test-results/25.png) | React v16 | 500 | 5 |   30,392 |  | 58.3% |
 |  | 	                                                
 | 11 [(img)](/../../raw/master/test-results/11.png) | Angular | 500 | 1 | 30,451 | 13,750 | 45.2% |
 | 12 [(img)](/../../raw/master/test-results/12.png) | Angular | 500 | 2 | 30,611 | 13,592 | 44.4% |
@@ -155,11 +155,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | 09 [(img)](/../../raw/master/test-results/09.png) | React v15 | 100 | 4 | 30,486 | 3,564 | 11.7% |
 | 10 [(img)](/../../raw/master/test-results/10.png) | React v15 | 100 | 5 | 30,271 | 3,745 | 12.4% |
 | |
-| 26 [(img)](/../../raw/master/test-results/26.png) | React v16 | 100 | 1 |  |  | % |
-| 27 [(img)](/../../raw/master/test-results/27.png) | React v16 | 100 | 2 |  |  | % |
-| 28 [(img)](/../../raw/master/test-results/28.png) | React v16 | 100 | 3 |  |  | % |
-| 29 [(img)](/../../raw/master/test-results/29.png) | React v16 | 100 | 4 |  |  | % |
-| 30 [(img)](/../../raw/master/test-results/30.png) | React v16 | 100 | 5 |  |  | % |
+| 26 [(img)](/../../raw/master/test-results/26.png) | React v16 | 100 | 1 |  30,391  |  | 13.0% |
+| 27 [(img)](/../../raw/master/test-results/27.png) | React v16 | 100 | 2 |  |  | 10.3% |
+| 28 [(img)](/../../raw/master/test-results/28.png) | React v16 | 100 | 3 |  |  | 10.4% |
+| 29 [(img)](/../../raw/master/test-results/29.png) | React v16 | 100 | 4 |  |  | 11.8% |
+| 30 [(img)](/../../raw/master/test-results/30.png) | React v16 | 100 | 5 |  |  | 12.5% |
 | |
 | 16 [(img)](/../../raw/master/test-results/16.png) | Angular | 100 | 1 | 30,084 | 1,986 | 6.6% |
 | 17 [(img)](/../../raw/master/test-results/17.png) | Angular | 100 | 2 | 29,801 | 1,915 | 6.4% |
