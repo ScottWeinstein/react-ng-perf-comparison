@@ -13,7 +13,8 @@ We've also observed that running Angular results in fewer Major GCs.
 
 #### Demo
 * [Angular](https://scottweinstein.github.io/react-ng-perf-comparison/ang/)
-* [React](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
+* [React v15](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
+* [React v16](https://scottweinstein.github.io/react-ng-perf-comparison/react-16/)
 
 ToC
 =================
