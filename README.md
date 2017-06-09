@@ -114,11 +114,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | --- | --- | --- | ---| --- | 
 | 100 | Angular | 6.3% | 1,905 | 0.3% |
 | 100 | React	| 12.1%	&#x1F53A; | 3,669 | 0.5% | 
-| 100 | React v16 Alpha | %	&#x1F53A; |  | % | 
+| 100 | React v16 Alpha | % |  | % | 
 |   |
 | 500 | Angular	| 44.5%	| 13,594 | 0.5% |
 | 500 | React | 53.9% &#x1F53A; | 16,494 | 2.1% |
-| 500 | React v16 Alpha | % &#x1F53A; |  | % |
+| 500 | React v16 Alpha | % |  | % |
 
 *See the [Test Results folder](./test-results/) for screenshots of the entire result set.*
 
