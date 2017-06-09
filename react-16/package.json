@@ -1,0 +1,31 @@
+{
+  "name": "react-perf-test-v16",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "d3-format": "^1.2.0",
+    "lodash": "^4.17.4",
+    "react": "^16.0.0-alpha.13",
+    "react-dom": "^16.0.0-alpha.13",
+    "rxjs": "^5.4.0"
+  },
+  "devDependencies": {
+    "mv": "^2.1.1",
+    "react-scripts": "0.9.5",
+    "rimraf": "^2.6.1",
+    "serve": "^5.2.2"
+  },
+  "scripts": {
+    "build": "npm run clean:docs && react-scripts build && npm run mv -- -v build/* ../docs/react-16/",
+    "build:serve": "npm run build && npm run serve:docs",
+    "clean:docs": "npm run rimraf -- ../docs/react-16/*",
+    "eject": "react-scripts eject",
+    "mv": "mv",
+    "rimraf": "rimraf",
+    "serve": "serve",
+    "serve:docs": "npm run serve -- -p 5000 -s ../docs/react-16",
+    "start": "PORT=9000 react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "homepage": "."
+}
