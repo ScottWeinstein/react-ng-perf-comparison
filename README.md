@@ -13,7 +13,8 @@ We've also observed that running Angular results in fewer Major GCs.
 
 #### Demo
 * [Angular](https://scottweinstein.github.io/react-ng-perf-comparison/ang/)
-* [React](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
+* [React v15](https://scottweinstein.github.io/react-ng-perf-comparison/react/)
+* [React v16](https://scottweinstein.github.io/react-ng-perf-comparison/react-16/)
 
 ToC
 =================
@@ -113,9 +114,11 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 | --- | --- | --- | ---| --- | 
 | 100 | Angular | 6.3% | 1,905 | 0.3% |
 | 100 | React	| 12.1%	&#x1F53A; | 3,669 | 0.5% | 
+| 100 | React v16 Alpha | 11.6% | 3,547 | % | 
 |   |
 | 500 | Angular	| 44.5%	| 13,594 | 0.5% |
 | 500 | React | 53.9% &#x1F53A; | 16,494 | 2.1% |
+| 500 | React v16 Alpha | 58.7% | 17,803 | % |
 
 *See the [Test Results folder](./test-results/) for screenshots of the entire result set.*
 
@@ -124,11 +127,17 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | --- | --- | --- | --- | --- | --- | --- |
-| 01 [(img)](/../../raw/master/test-results/01.png) | React | 500 | 1 | 30,452 | 16,727 | 54.9% |
-| 02 [(img)](/../../raw/master/test-results/02.png) | React | 500 | 2 | 30,871 | 17,609 | 57.0% |
-| 03 [(img)](/../../raw/master/test-results/03.png) | React | 500 | 3 | 30,862 | 15,893 | 51.5% |
-| 04 [(img)](/../../raw/master/test-results/04.png) | React | 500 | 4 | 30,348 | 16,087 | 53.0% |
-| 05 [(img)](/../../raw/master/test-results/05.png) | React | 500 | 5 | 30,512 | 16,154 | 52.9% |
+| 01 [(img)](/../../raw/master/test-results/01.png) | React v15 | 500 | 1 | 30,452 | 16,727 | 54.9% |
+| 02 [(img)](/../../raw/master/test-results/02.png) | React v15 | 500 | 2 | 30,871 | 17,609 | 57.0% |
+| 03 [(img)](/../../raw/master/test-results/03.png) | React v15 | 500 | 3 | 30,862 | 15,893 | 51.5% |
+| 04 [(img)](/../../raw/master/test-results/04.png) | React v15 | 500 | 4 | 30,348 | 16,087 | 53.0% |
+| 05 [(img)](/../../raw/master/test-results/05.png) | React v15 | 500 | 5 | 30,512 | 16,154 | 52.9% |
+|  | 	                                                
+| 21 [(img)](/../../raw/master/test-results/21.png) | React v16 | 500 | 1 | 30,369 | 17,886 | 58.9% |
+| 22 [(img)](/../../raw/master/test-results/22.png) | React v16 | 500 | 2 | 30,434 | 18,472 | 60.7% |
+| 23 [(img)](/../../raw/master/test-results/23.png) | React v16 | 500 | 3 | 30,040 | 17,618 | 58.6% |
+| 24 [(img)](/../../raw/master/test-results/24.png) | React v16 | 500 | 4 | 30,312 | 17,311 | 57.1% |
+| 25 [(img)](/../../raw/master/test-results/25.png) | React v16 | 500 | 5 | 30,392 | 17,730 | 58.3% |
 |  | 	                                                
 | 11 [(img)](/../../raw/master/test-results/11.png) | Angular | 500 | 1 | 30,451 | 13,750 | 45.2% |
 | 12 [(img)](/../../raw/master/test-results/12.png) | Angular | 500 | 2 | 30,611 | 13,592 | 44.4% |
@@ -140,11 +149,17 @@ __For Test 2 (100 Components), we found that React averaged 92% more time script
 
 | TestId | Type | Components | Run # | Total Duration (ms) | Scripting (ms) | % of Test Time Spent Scripting |
 | ------ | ----- | --------- | ----- | ------------------- | -------------- | ------------------------------ |
-| 06 [(img)](/../../raw/master/test-results/06.png) | React | 100 | 1 | 30,570 | 3,895 | 12.7% |
-| 07 [(img)](/../../raw/master/test-results/07.png) | React | 100 | 2 | 29,890 | 3,564 | 11.9% |
-| 08 [(img)](/../../raw/master/test-results/08.png) | React | 100 | 3 | 30,615 | 3,575 | 11.7% |
-| 09 [(img)](/../../raw/master/test-results/09.png) | React | 100 | 4 | 30,486 | 3,564 | 11.7% |
-| 10 [(img)](/../../raw/master/test-results/10.png) | React | 100 | 5 | 30,271 | 3,745 | 12.4% |
+| 06 [(img)](/../../raw/master/test-results/06.png) | React v15 | 100 | 1 | 30,570 | 3,895 | 12.7% |
+| 07 [(img)](/../../raw/master/test-results/07.png) | React v15 | 100 | 2 | 29,890 | 3,564 | 11.9% |
+| 08 [(img)](/../../raw/master/test-results/08.png) | React v15 | 100 | 3 | 30,615 | 3,575 | 11.7% |
+| 09 [(img)](/../../raw/master/test-results/09.png) | React v15 | 100 | 4 | 30,486 | 3,564 | 11.7% |
+| 10 [(img)](/../../raw/master/test-results/10.png) | React v15 | 100 | 5 | 30,271 | 3,745 | 12.4% |
+| |
+| 26 [(img)](/../../raw/master/test-results/26.png) | React v16 | 100 | 1 | 30,391 | 3,963 | 13.0% |
+| 27 [(img)](/../../raw/master/test-results/27.png) | React v16 | 100 | 2 | 30,436 | 3,146 | 10.3% |
+| 28 [(img)](/../../raw/master/test-results/28.png) | React v16 | 100 | 3 | 30,499 | 3,176 | 10.4% |
+| 29 [(img)](/../../raw/master/test-results/29.png) | React v16 | 100 | 4 | 30,414 | 3,604 | 11.8% |
+| 30 [(img)](/../../raw/master/test-results/30.png) | React v16 | 100 | 5 | 30,722 | 3,848 | 12.5% |
 | |
 | 16 [(img)](/../../raw/master/test-results/16.png) | Angular | 100 | 1 | 30,084 | 1,986 | 6.6% |
 | 17 [(img)](/../../raw/master/test-results/17.png) | Angular | 100 | 2 | 29,801 | 1,915 | 6.4% |
